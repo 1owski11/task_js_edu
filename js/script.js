@@ -1,5 +1,6 @@
-"use strict"
+ "use strict"
 
+/*
 function count_even() {
     let even = 0;
     let odd = 0;
@@ -94,6 +95,7 @@ mult_table(+prompt("Введите число для таблицы умноже
 add_till_num(+prompt("Введите число для сложения"));
 print_num();
 num_sequence(+prompt("Введите число для последовательности Фиббоначи"));
+*/
 
 let rn = Math.floor(Math.random()*(101-1)) + 1;
 let x;
@@ -107,4 +109,38 @@ do {
     } else if (x == rn) {
         alert('В точку!')
     }
-} while (x != rn)
+} while (x != rn) 
+
+const book = {
+    title: "kniga",
+    author: "niga",
+    year: "2025",
+    get_summary: function() {
+        return this.title, this.author, this.year
+    }
+};
+
+
+
+const arr = [];
+for (let i = 0; i < 10; i++) {
+    arr.push(Math.round(Math.random()*(11-1))+1);
+}
+
+function getMax(ar) {
+    ar = ar.sort();
+    return ar[ar.length - 1];
+}
+
+console.log(arr);
+console.log(getMax(arr));
+
+
+
+const users =`{
+    "user_1": {"username": "1owski11", "email": "1owski11@gmail.com"}, 
+    "user_2": {"username": "temaet", "email": "temaet@gmail.com"}, 
+    "user_3": {"username": "lars", "email": "lars@gmail.com"}
+}`
+const J_users = JSON.parse(users)
+console.log(J_users.user_1.username)
