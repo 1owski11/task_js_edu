@@ -94,3 +94,17 @@ mult_table(+prompt("Введите число для таблицы умноже
 add_till_num(+prompt("Введите число для сложения"));
 print_num();
 num_sequence(+prompt("Введите число для последовательности Фиббоначи"));
+
+let rn = Math.floor(Math.random()*(101-1)) + 1;
+let x;
+
+do {
+    x = prompt('Введите число: ')
+    if (x < rn) {
+        alert('Число меньше чем надо')
+    } else if (x > rn) {
+        alert('Число больше чем надо')
+    } else if (x == rn) {
+        alert('В точку!')
+    }
+} while (x != rn)
